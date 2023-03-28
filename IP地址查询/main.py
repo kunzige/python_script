@@ -2,8 +2,11 @@ from flask import Flask,request
 import httpx
 import sys
 from bs4 import BeautifulSoup
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
+# 设置flask的跨域
+
 
 @app.route('/ip')
 def get_address():
